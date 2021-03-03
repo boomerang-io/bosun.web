@@ -3,8 +3,12 @@ import { BASE_LAUNCH_ENV_URL } from "./platformUrlConfig";
 // See server/app.js for implementation
 export const APP_ROOT = window?._SERVER_DATA?.APP_ROOT ?? "/bosun";
 
-export const PRODUCT_STANDALONE = process.env.PRODUCT_STANDALONE === "true" ?? false;
-
+export const PRODUCT_STANDALONE =
+  window._SERVER_DATA && window._SERVER_DATA.PRODUCT_STANDALONE
+    ? window._SERVER_DATA.PRODUCT_STANDALONE === "true"
+    : process.env.REACT_APP_PRODUCT_STANDALONE
+    ? true
+    : false;
 // TODO
 export const ROUTES = {};
 export const appPath = {
