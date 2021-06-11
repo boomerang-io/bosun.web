@@ -5,7 +5,7 @@ import { render as rtlRender } from "@testing-library/react";
 import { ReactQueryConfigProvider } from "react-query";
 import { AppContext } from "State/context";
 import { teams as teamsFixture, profile as userFixture } from "ApiServer/fixtures";
-import "@testing-library/jest-dom/extend-expect";
+import "@testing-library/jest-dom";
 
 function rtlRouterRender(
   ui,

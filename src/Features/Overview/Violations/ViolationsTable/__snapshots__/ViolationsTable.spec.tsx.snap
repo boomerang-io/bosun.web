@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViolationsTable --- Snapshot Capturing Snapshot of ViolationsTable 1`] = `
+<body
+  id="app"
+>
+  <div>
+    <div
+      class="bx--data-table-container"
+    >
+      <div
+        class="bx--data-table-content"
+      >
+        <table
+          class="bx--data-table tableContainer bx--data-table--sort bx--data-table--no-border"
+        >
+          <thead>
+            <tr
+              class="tableHeadRow"
+            >
+              <th
+                aria-sort="none"
+                class="tableHeader policyName"
+                scope="col"
+              >
+                <button
+                  class="tableHeader policyName bx--table-sort"
+                  type="button"
+                >
+                  <span
+                    class="bx--table-sort__flex"
+                  >
+                    <div
+                      class="bx--table-header-label"
+                    >
+                      Policy
+                    </div>
+                    <svg
+                      aria-label="Sort rows by this header in ascending order"
+                      class="bx--table-sort__icon"
+                      fill="currentColor"
+                      focusable="false"
+                      height="20"
+                      preserveAspectRatio="xMidYMid meet"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 4L6 14 7.41 15.41 15 7.83 15 30 17 30 17 7.83 24.59 15.41 26 14 16 4z"
+                      />
+                    </svg>
+                    <svg
+                      aria-label="Sort rows by this header in ascending order"
+                      class="bx--table-sort__icon-unsorted"
+                      fill="currentColor"
+                      focusable="false"
+                      height="20"
+                      preserveAspectRatio="xMidYMid meet"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.6 20.6L24 24.2 24 4 22 4 22 24.2 18.4 20.6 17 22 23 28 29 22zM9 4L3 10 4.4 11.4 8 7.8 8 28 10 28 10 7.8 13.6 11.4 15 10z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </th>
+              <th
+                aria-sort="none"
+                class="tableHeader nbrViolations"
+                scope="col"
+              >
+                <button
+                  class="tableHeader nbrViolations bx--table-sort"
+                  type="button"
+                >
+                  <span
+                    class="bx--table-sort__flex"
+                  >
+                    <div
+                      class="bx--table-header-label"
+                    >
+                      Violations
+                    </div>
+                    <svg
+                      aria-label="Sort rows by this header in ascending order"
+                      class="bx--table-sort__icon"
+                      fill="currentColor"
+                      focusable="false"
+                      height="20"
+                      preserveAspectRatio="xMidYMid meet"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 4L6 14 7.41 15.41 15 7.83 15 30 17 30 17 7.83 24.59 15.41 26 14 16 4z"
+                      />
+                    </svg>
+                    <svg
+                      aria-label="Sort rows by this header in ascending order"
+                      class="bx--table-sort__icon-unsorted"
+                      fill="currentColor"
+                      focusable="false"
+                      height="20"
+                      preserveAspectRatio="xMidYMid meet"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.6 20.6L24 24.2 24 4 22 4 22 24.2 18.4 20.6 17 22 23 28 29 22zM9 4L3 10 4.4 11.4 8 7.8 8 28 10 28 10 7.8 13.6 11.4 15 10z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </th>
+              <th
+                aria-sort="none"
+                class="tableHeader policyDefinitionTypes"
+                scope="col"
+              >
+                <button
+                  class="tableHeader policyDefinitionTypes bx--table-sort"
+                  type="button"
+                >
+                  <span
+                    class="bx--table-sort__flex"
+                  >
+                    <div
+                      class="bx--table-header-label"
+                    >
+                      Failed Definition Types
+                    </div>
+                    <svg
+                      aria-label="Sort rows by this header in ascending order"
+                      class="bx--table-sort__icon"
+                      fill="currentColor"
+                      focusable="false"
+                      height="20"
+                      preserveAspectRatio="xMidYMid meet"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 4L6 14 7.41 15.41 15 7.83 15 30 17 30 17 7.83 24.59 15.41 26 14 16 4z"
+                      />
+                    </svg>
+                    <svg
+                      aria-label="Sort rows by this header in ascending order"
+                      class="bx--table-sort__icon-unsorted"
+                      fill="currentColor"
+                      focusable="false"
+                      height="20"
+                      preserveAspectRatio="xMidYMid meet"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.6 20.6L24 24.2 24 4 22 4 22 24.2 18.4 20.6 17 22 23 28 29 22zM9 4L3 10 4.4 11.4 8 7.8 8 28 10 28 10 7.8 13.6 11.4 15 10z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </th>
+              <th
+                aria-sort="none"
+                class="tableHeader referenceId"
+                scope="col"
+              >
+                <button
+                  class="tableHeader referenceId bx--table-sort"
+                  type="button"
+                >
+                  <span
+                    class="bx--table-sort__flex"
+                  >
+                    <div
+                      class="bx--table-header-label"
+                    >
+                      Reference ID
+                    </div>
+                    <svg
+                      aria-label="Sort rows by this header in ascending order"
+                      class="bx--table-sort__icon"
+                      fill="currentColor"
+                      focusable="false"
+                      height="20"
+                      preserveAspectRatio="xMidYMid meet"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 4L6 14 7.41 15.41 15 7.83 15 30 17 30 17 7.83 24.59 15.41 26 14 16 4z"
+                      />
+                    </svg>
+                    <svg
+                      aria-label="Sort rows by this header in ascending order"
+                      class="bx--table-sort__icon-unsorted"
+                      fill="currentColor"
+                      focusable="false"
+                      height="20"
+                      preserveAspectRatio="xMidYMid meet"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.6 20.6L24 24.2 24 4 22 4 22 24.2 18.4 20.6 17 22 23 28 29 22zM9 4L3 10 4.4 11.4 8 7.8 8 28 10 28 10 7.8 13.6 11.4 15 10z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </th>
+              <th
+                aria-sort="none"
+                class="tableHeader policyActivityCreatedDate"
+                scope="col"
+              >
+                <button
+                  class="tableHeader policyActivityCreatedDate bx--table-sort"
+                  type="button"
+                >
+                  <span
+                    class="bx--table-sort__flex"
+                  >
+                    <div
+                      class="bx--table-header-label"
+                    >
+                      Activity Date
+                    </div>
+                    <svg
+                      aria-label="Sort rows by this header in ascending order"
+                      class="bx--table-sort__icon"
+                      fill="currentColor"
+                      focusable="false"
+                      height="20"
+                      preserveAspectRatio="xMidYMid meet"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 4L6 14 7.41 15.41 15 7.83 15 30 17 30 17 7.83 24.59 15.41 26 14 16 4z"
+                      />
+                    </svg>
+                    <svg
+                      aria-label="Sort rows by this header in ascending order"
+                      class="bx--table-sort__icon-unsorted"
+                      fill="currentColor"
+                      focusable="false"
+                      height="20"
+                      preserveAspectRatio="xMidYMid meet"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.6 20.6L24 24.2 24 4 22 4 22 24.2 18.4 20.6 17 22 23 28 29 22zM9 4L3 10 4.4 11.4 8 7.8 8 28 10 28 10 7.8 13.6 11.4 15 10z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            aria-live="polite"
+            class="tableBody"
+          >
+            <tr
+              class="tableBodyRow"
+              data-testid="violations-table-row"
+              tabindex="0"
+            >
+              <td
+                style="padding: 0px;"
+              >
+                <div
+                  class="tableCell"
+                >
+                  <p
+                    class="tableTextarea"
+                  >
+                    Glens Policy
+                  </p>
+                </div>
+              </td>
+              <td
+                style="padding: 0px;"
+              >
+                <div
+                  class="tableCell"
+                >
+                  <p
+                    class="tableTextarea"
+                  >
+                    1
+                  </p>
+                </div>
+              </td>
+              <td
+                style="padding: 0px;"
+              >
+                <div
+                  class="tableCell"
+                >
+                  <p
+                    class="tableTextarea"
+                  >
+                    Static Code Analysis, Static Code Analysis
+                  </p>
+                </div>
+              </td>
+              <td
+                style="padding: 0px;"
+              >
+                <div
+                  class="tableCell"
+                >
+                  <p
+                    class="tableTextarea"
+                  >
+                    ---
+                  </p>
+                </div>
+              </td>
+              <td
+                style="padding: 0px;"
+              >
+                <div
+                  class="tableCell"
+                >
+                  <time
+                    class="tableTextarea"
+                  >
+                    January 01, 2020
+                  </time>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    class="bx--bmrg-modal-portal"
+  />
+</body>
+`;

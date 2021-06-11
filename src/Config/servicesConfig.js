@@ -11,7 +11,9 @@ export const PRODUCT_SERVICE_ENV_URL =
   process.env.NODE_ENV === "production" ? window._SERVER_DATA && window._SERVER_DATA.PRODUCT_SERVICE_ENV_URL : "/api";
 
 export const CICD_PRODUCT_SERVICE_ENV_URL =
-  process.env.NODE_ENV === "production" ? window._SERVER_DATA && window._SERVER_DATA.CICD_PRODUCT_SERVICE_ENV_URL : "/api";
+  process.env.NODE_ENV === "production"
+    ? window._SERVER_DATA && window._SERVER_DATA.CICD_PRODUCT_SERVICE_ENV_URL
+    : "/api";
 
 const REACT_APP_PORT_FORWARD = process.env.REACT_APP_PORT_FORWARD;
 
@@ -39,22 +41,22 @@ export const SERVICE_REQUEST_STATUSES = {
 };
 
 export const serviceUrl = {
-  deletePolicy: ({policyId}) => `${BASE_SERVICE_PRODUCT_URL}/policies/${policyId}`,
+  deletePolicy: ({ policyId }) => `${BASE_SERVICE_PRODUCT_URL}/policies/${policyId}`,
   getCicdNavigation: ({ teamId }) => `${BASE_CICD_PRODUCT_URL}/navigation${teamId ? "?teamId=" + teamId : ""}`,
-  getInsights: ({teamId}) => `${BASE_SERVICE_PRODUCT_URL}/policies/insights?teamId=${teamId}`,
+  getInsights: ({ teamId }) => `${BASE_SERVICE_PRODUCT_URL}/policies/insights?teamId=${teamId}`,
   getInsightsOverview: () => `${BASE_SERVICE_PRODUCT_URL}/policies/insights`,
   getPlatformNavigation: () => `${BASE_SERVICE_USERS_URL}/navigation`,
-  getPolicy: ({policyId}) => `${BASE_SERVICE_PRODUCT_URL}/policies/${policyId}`,
+  getPolicy: ({ policyId }) => `${BASE_SERVICE_PRODUCT_URL}/policies/${policyId}`,
   getPolicyOverview: () => `${BASE_SERVICE_PRODUCT_URL}/policies`,
   getTeams: () => `${BASE_SERVICE_PRODUCT_URL}/teams`,
-  getTeamPolicies: ({teamId}) => `${BASE_SERVICE_PRODUCT_URL}/policies?teamId=${teamId}`,
+  getTeamPolicies: ({ teamId }) => `${BASE_SERVICE_PRODUCT_URL}/policies?teamId=${teamId}`,
   getTemplates: () => `${BASE_SERVICE_PRODUCT_URL}/templates`,
   getUserProfile: () => `${BASE_SERVICE_USERS_URL}/profile`,
-  getValidateInfo: ({policyId}) => `${BASE_SERVICE_PRODUCT_URL}/validate/info/${policyId}`,
-  getViolations: ({teamId}) => `${BASE_SERVICE_PRODUCT_URL}/policies/violations?teamId=${teamId}`,
+  getValidateInfo: ({ policyId }) => `${BASE_SERVICE_PRODUCT_URL}/validate/info/${policyId}`,
+  getViolations: ({ teamId }) => `${BASE_SERVICE_PRODUCT_URL}/policies/violations?teamId=${teamId}`,
   getViolationsOverview: () => `${BASE_SERVICE_PRODUCT_URL}/policies/violations`,
-  patchUpdatePolicy: ({policyId}) => `${BASE_SERVICE_PRODUCT_URL}/policies/${policyId}`,
-  patchUpdatePolicyTemplate: ({templateId}) =>`${BASE_SERVICE_PRODUCT_URL}/templates/${templateId}`,
+  patchUpdatePolicy: ({ policyId }) => `${BASE_SERVICE_PRODUCT_URL}/policies/${policyId}`,
+  patchUpdatePolicyTemplate: ({ templateId }) => `${BASE_SERVICE_PRODUCT_URL}/templates/${templateId}`,
   postCreatePolicy: () => `${BASE_SERVICE_PRODUCT_URL}/policies`,
   postCreatePolicyTemplate: () => `${BASE_SERVICE_PRODUCT_URL}/templates`,
   postCreateTeam: () => `${BASE_SERVICE_PRODUCT_URL}/teams`,
@@ -72,11 +74,20 @@ export const resolver = {
   postMutation: (request) => axios.post(request),
   patchMutation: (request) => axios.patch(request),
   putMutation: (request) => axios.put(request),
-  deletePolicy: ({ policyId }) => cancellableResolver({url: serviceUrl.deletePolicy({policyId}), method:HTTPMethods.Delete}),
-  patchUpdatePolicy: ({ policyId, body }) => cancellableResolver({url: serviceUrl.patchUpdatePolicy({policyId}), method:HTTPMethods.Patch, data:body}),
-  patchUpdatePolicyTemplate: ({ templateId, body }) => cancellableResolver({url: serviceUrl.patchUpdatePolicyTemplate({templateId}), method:HTTPMethods.Patch, data:body}),
-  postCreatePolicy: ({ body }) => cancellableResolver({url: serviceUrl.postCreatePolicy(), method:HTTPMethods.Post, data:body}),
-  postCreatePolicyTemplate: ({ body }) => cancellableResolver({url: serviceUrl.postCreatePolicyTemplate(), method:HTTPMethods.Post, data:body}),
+  deletePolicy: ({ policyId }) =>
+    cancellableResolver({ url: serviceUrl.deletePolicy({ policyId }), method: HTTPMethods.Delete }),
+  patchUpdatePolicy: ({ policyId, body }) =>
+    cancellableResolver({ url: serviceUrl.patchUpdatePolicy({ policyId }), method: HTTPMethods.Patch, data: body }),
+  patchUpdatePolicyTemplate: ({ templateId, body }) =>
+    cancellableResolver({
+      url: serviceUrl.patchUpdatePolicyTemplate({ templateId }),
+      method: HTTPMethods.Patch,
+      data: body,
+    }),
+  postCreatePolicy: ({ body }) =>
+    cancellableResolver({ url: serviceUrl.postCreatePolicy(), method: HTTPMethods.Post, data: body }),
+  postCreatePolicyTemplate: ({ body }) =>
+    cancellableResolver({ url: serviceUrl.postCreatePolicyTemplate(), method: HTTPMethods.Post, data: body }),
   postCreateTeam: ({ body }) =>
     cancellableResolver({ url: serviceUrl.postCreateTeam(), data: body, method: HTTPMethods.Post }),
 };

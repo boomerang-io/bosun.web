@@ -22,7 +22,7 @@ export function startApiServer({ environment = "test", timing = 0 } = {}) {
       application: Serializer.extend({
         root: false,
         embed: true,
-      })
+      }),
     },
     // Register the data as a model so we can use the schema
     models: {
@@ -62,14 +62,14 @@ export function startApiServer({ environment = "test", timing = 0 } = {}) {
       this.get(serviceUrl.getTeams(), (schema) => {
         return schema.db.teams;
       });
-      
-      this.get(serviceUrl.getPolicy({policyId: ":policyId"}), (schema, request) => {
+
+      this.get(serviceUrl.getPolicy({ policyId: ":policyId" }), (schema, request) => {
         let { policyId } = request.params;
         let activePolicy = schema.policies.find(policyId);
         return activePolicy;
       });
 
-      this.get(serviceUrl.getValidateInfo({policyId: ":policyId"}), (schema) => {
+      this.get(serviceUrl.getValidateInfo({ policyId: ":policyId" }), (schema) => {
         return schema.db.validateInfo;
       });
 
@@ -79,7 +79,7 @@ export function startApiServer({ environment = "test", timing = 0 } = {}) {
 
       this.get(serviceUrl.getPolicyOverview(), (schema, request) => {
         let { teamId } = request.queryParams;
-        return schema.db.policies.filter(policy => policy.teamId === teamId);
+        return schema.db.policies.filter((policy) => policy.teamId === teamId);
       });
 
       this.get(serviceUrl.getViolationsOverview(), (schema) => {
@@ -92,15 +92,15 @@ export function startApiServer({ environment = "test", timing = 0 } = {}) {
 
       this.post(serviceUrl.postCreatePolicy(), (schema, request) => {
         let body = JSON.parse(request.requestBody);
-        return schema.policies.create({...body, id: uuid()});
+        return schema.policies.create({ ...body, id: uuid() });
       });
 
       this.post(serviceUrl.postCreatePolicyTemplate(), (schema, request) => {
         let body = JSON.parse(request.requestBody);
-        return schema.templates.create({...body, id: uuid()});
+        return schema.templates.create({ ...body, id: uuid() });
       });
 
-      this.patch(serviceUrl.patchUpdatePolicy({policyId: ":policyId"}), (schema, request) => {
+      this.patch(serviceUrl.patchUpdatePolicy({ policyId: ":policyId" }), (schema, request) => {
         let { policyId } = request.params;
         let body = JSON.parse(request.requestBody);
         let activePolicy = schema.policies.find(policyId);
@@ -108,7 +108,7 @@ export function startApiServer({ environment = "test", timing = 0 } = {}) {
         return schema.policies.all();
       });
 
-      this.patch(serviceUrl.patchUpdatePolicyTemplate({templateId: ":templateId"}), (schema, request) => {
+      this.patch(serviceUrl.patchUpdatePolicyTemplate({ templateId: ":templateId" }), (schema, request) => {
         let { templateId } = request.params;
         let body = JSON.parse(request.requestBody);
         let activeTemplate = schema.templates.find(templateId);
@@ -116,10 +116,10 @@ export function startApiServer({ environment = "test", timing = 0 } = {}) {
         return schema.templates.all();
       });
 
-      this.delete(serviceUrl.deletePolicy({policyId: ":policyId"}), (schema, request) => {
+      this.delete(serviceUrl.deletePolicy({ policyId: ":policyId" }), (schema, request) => {
         let { policyId } = request.params;
         let activePolicy = schema.policies.find(policyId);
-        activePolicy.destroy({id: policyId});
+        activePolicy.destroy({ id: policyId });
         return schema.policies.all();
       });
     },
