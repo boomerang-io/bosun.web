@@ -8,8 +8,8 @@ import {
   ErrorMessage,
   SkeletonPlaceholder,
   DataTableSkeleton,
-  ErrorDragon,
 } from "@boomerang-io/carbon-addons-boomerang-react";
+import ErrorFullPage from "Components/ErrorFullPage";
 import Welcome from "Components/Welcome";
 import Insights from "./Insights";
 import Policies from "./Policies";
@@ -109,7 +109,7 @@ export function Overview() {
     }
 
     if (policiesError && insightsError && violationsError) {
-      return <ErrorDragon />;
+      return <ErrorFullPage />;
     }
     return (
       <>

@@ -3,7 +3,8 @@ import { Helmet } from "react-helmet";
 import { matchPath, useLocation, useHistory } from "react-router-dom";
 import { useQuery } from "react-query";
 import { FlagsProvider } from "flagged";
-import { ErrorDragon, ErrorBoundary, Loading } from "@boomerang-io/carbon-addons-boomerang-react";
+import { ErrorBoundary, Loading } from "@boomerang-io/carbon-addons-boomerang-react";
+import ErrorFullPage from "Components/ErrorFullPage";
 import Main from "./Main";
 import Navbar from "./Navbar";
 import { PRODUCT_STANDALONE } from "Config/appConfig";
@@ -75,7 +76,7 @@ export function App() {
     }
 
     if (teamsState.error) {
-      return <ErrorDragon style={{ margin: "3.5rem 0" }} />;
+      return <ErrorFullPage style={{ margin: "3.5rem 0" }} />;
     }
 
     if (teamsState.data) {
@@ -90,7 +91,7 @@ export function App() {
   }
 
   return (
-    <ErrorBoundary errorComponent={ErrorDragon}>
+    <ErrorBoundary errorComponent={ErrorFullPage}>
       <FlagsProvider features={{ standalone: PRODUCT_STANDALONE }}>
         <div className={styles.container}>
           {platformNavigationState?.data && userState?.data && <Helmet defaultTitle={appTitle} titleTemplate={`%s - ${appTitle}`} />}

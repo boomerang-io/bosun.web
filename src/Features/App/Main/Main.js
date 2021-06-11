@@ -23,7 +23,7 @@ function Main() {
           <Route path={appPath.createPolicy} component={CreatePolicy} />
           <Route path={appPath.overview} component={Overview} />
           <Route exact path="/" component={Overview} />
-          <Route path="*" component={Error404} />
+          <Route path="*" component={() => <Error404 theme="boomerang"/>} />
         </Switch>
       </Suspense>
       <NotificationsContainer enableMultiContainer />

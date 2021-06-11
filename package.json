@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://launch.boomerangplatform.net/BMRG_APP_ROOT_CONTEXT",
   "dependencies": {
-    "@boomerang-io/carbon-addons-boomerang-react": "1.1.3",
+    "@boomerang-io/carbon-addons-boomerang-react": "1.2.2",
     "@boomerang-io/utils": "0.0.1",
     "axios": "0.21.1",
     "carbon-components": "^10.22.0",
